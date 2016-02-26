@@ -13,4 +13,4 @@ function Send-CSVToLogstash {
 }
 
 #Send-CSVToLogstash -CSVFilePath "C:\Users\cmagnuson\Desktop\Operations reporting\DC Report 2016.01.29 0500 DC Light sample.csv"
-Send-CSVToLogstash -CSVFilePath "C:\Users\cmagnuson\Desktop\Operations reporting\DC Report 2016.01.29 0500 DC Light.csv"
+#Send-CSVToLogstash -CSVFilePath "C:\Users\cmagnuson\Desktop\Operations reporting\DC Report 2016.01.29 0500 DC Light.csv"
