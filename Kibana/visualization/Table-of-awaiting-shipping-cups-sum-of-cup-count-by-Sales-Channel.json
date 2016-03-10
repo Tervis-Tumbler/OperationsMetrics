@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "description": "",
+  "title": "Table of awaiting shipping cups sum of cup count by Sales Channel",
+  "uiStateJSON": "{}",
+  "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"Cup Count\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Sales Channel.raw\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  },
+  "savedSearchId": "Past-due-shipment-date-older-than-today-and-only-finished-goods-and-SO-line-status-Awaiting_Shipping"
+}

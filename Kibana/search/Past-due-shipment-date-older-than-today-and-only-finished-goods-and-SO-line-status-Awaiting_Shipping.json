@@ -1,0 +1,22 @@
+{
+  "description": "",
+  "title": "Past due shipment date older than today and only finished goods and SO line status Awaiting_Shipping",
+  "version": 1,
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"logstash-dclight*\",\"query\":{\"query_string\":{\"query\":\"Tervis\\\\ Ship\\\\ \\\\(PD\\\\):[now-10y TO now-1d] AND NOT Order\\\\ Type:BK\",\"analyze_wildcard\":true}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-dclight*\",\"key\":\"Item Type\",\"negate\":false,\"value\":\"FINISHED GOOD\"},\"query\":{\"match\":{\"Item Type\":{\"query\":\"FINISHED GOOD\",\"type\":\"phrase\"}}}},{\"meta\":{\"negate\":false,\"index\":\"logstash-dclight*\",\"key\":\"SO Line Status\",\"value\":\"AWAITING_SHIPPING\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"SO Line Status\":{\"query\":\"AWAITING_SHIPPING\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":true,\"index\":\"logstash-dclight*\",\"key\":\"Order Type\",\"value\":\"FORECAST\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"Order Type\":{\"query\":\"FORECAST\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+  },
+  "sort": [
+    "Tervis Ship (PD)",
+    "desc"
+  ],
+  "columns": [
+    "Tervis Ship (PD)",
+    "SO #",
+    "Bill To Name",
+    "Customer PO",
+    "Work Order Status",
+    "Sales Channel",
+    "Cup Count"
+  ]
+}

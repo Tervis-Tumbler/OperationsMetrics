@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "description": "",
+  "title": "Awaiting past due pie",
+  "uiStateJSON": "{}",
+  "visState": "{\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"Cup Count\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Sales Channel.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  },
+  "savedSearchId": "Past-due-shipment-date-older-than-today-and-only-finished-goods-and-SO-line-status-Awaiting_Shipping"
+}

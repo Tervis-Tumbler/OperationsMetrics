@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "description": "",
+  "title": "Awaiting past due Sum Cup Count Total",
+  "uiStateJSON": "{}",
+  "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"Cup Count\"}}],\"listeners\":{}}",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  },
+  "savedSearchId": "Past-due-shipment-date-older-than-today-and-only-finished-goods-and-SO-line-status-Awaiting_Shipping"
+}

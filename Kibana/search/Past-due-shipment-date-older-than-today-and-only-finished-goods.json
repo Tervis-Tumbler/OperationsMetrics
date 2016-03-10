@@ -1,0 +1,16 @@
+{
+  "description": "",
+  "title": "Past due shipment date older than today and only finished goods",
+  "version": 1,
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"logstash-dclight*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"Tervis\\\\ Ship\\\\ \\\\(PD\\\\):[now-10y TO now]\"}},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-dclight*\",\"key\":\"Item Type\",\"value\":\"FINISHED GOOD\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"Item Type\":{\"query\":\"FINISHED GOOD\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+  },
+  "sort": [
+    "Tervis Ship (PD)",
+    "desc"
+  ],
+  "columns": [
+    "_source"
+  ]
+}

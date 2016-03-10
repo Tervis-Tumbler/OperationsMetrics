@@ -1,0 +1,13 @@
+{
+  "panelsJSON": "[{\"col\":5,\"id\":\"Awaiting-past-due-pie\",\"panelIndex\":1,\"row\":1,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Table-of-awaiting-shipping-cups-sum-of-cup-count-by-Sales-Channel\",\"panelIndex\":2,\"row\":1,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"Awaiting-past-due-Sum-Cup-Count-Total\",\"panelIndex\":3,\"row\":1,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"Tervis Ship (PD)\",\"SO #\",\"Bill To Name\",\"Customer PO\",\"Work Order Status\",\"Sales Channel\",\"Cup Count\"],\"id\":\"Past-due-shipment-date-older-than-today-and-only-finished-goods-and-SO-line-status-Awaiting_Shipping\",\"panelIndex\":4,\"row\":4,\"size_x\":12,\"size_y\":7,\"sort\":[\"Cup Count\",\"desc\"],\"type\":\"search\"}]",
+  "version": 1,
+  "description": "",
+  "timeRestore": false,
+  "title": "Awaiting shipping past due dashboard",
+  "uiStateJSON": "{}",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-dclight*\",\"key\":\"Item Type\",\"negate\":false,\"value\":\"FINISHED GOOD\"},\"query\":{\"match\":{\"Item Type\":{\"query\":\"FINISHED GOOD\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-dclight*\",\"key\":\"SO Line Status\",\"negate\":false,\"value\":\"AWAITING_SHIPPING\"},\"query\":{\"match\":{\"SO Line Status\":{\"query\":\"AWAITING_SHIPPING\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-dclight*\",\"key\":\"Order Type\",\"negate\":true,\"value\":\"FORECAST\"},\"query\":{\"match\":{\"Order Type\":{\"query\":\"FORECAST\",\"type\":\"phrase\"}}}},{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"Tervis\\\\ Ship\\\\ \\\\(PD\\\\):[now-10y TO now-1d] AND NOT Order\\\\ Type:BK\"}}}]}"
+  },
+  "optionsJSON": "{\"darkTheme\":false}",
+  "hits": 0
+}

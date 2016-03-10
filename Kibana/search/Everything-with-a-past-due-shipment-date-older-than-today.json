@@ -1,0 +1,16 @@
+{
+  "description": "",
+  "title": "Everything with a past due shipment date older than today",
+  "version": 1,
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"logstash-dclight*\",\"query\":{\"query_string\":{\"query\":\"Tervis\\\\ Ship\\\\ \\\\(PD\\\\):[now-10y TO now]\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+  },
+  "sort": [
+    "Tervis Ship (PD)",
+    "desc"
+  ],
+  "columns": [
+    "_source"
+  ]
+}
